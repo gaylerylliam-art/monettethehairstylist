@@ -2,5 +2,7 @@
 .netlify/
 .npm-cache/
 .repo/
+deploy-*.zip
+publish/
 server-output.log
 server-error.log
