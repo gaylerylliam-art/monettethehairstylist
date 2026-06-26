@@ -1,3 +1,4 @@
+.env
 .netlify/
 .repo/
 server-output.log
