@@ -1,0 +1,4 @@
+.netlify/
+.repo/
+server-output.log
+server-error.log
