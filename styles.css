@@ -255,21 +255,92 @@ h3 {
   border-block: 1px solid var(--line);
 }
 
-.skills-grid {
+.services-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  gap: 16px;
 }
 
-.skill {
-  min-height: 118px;
+.service-card {
+  position: relative;
+  min-height: 360px;
   display: flex;
-  align-items: flex-end;
-  padding: 18px;
-  background: var(--white);
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  overflow: hidden;
+  padding: 22px;
+  background-position: center;
+  background-size: cover;
   border: 1px solid var(--line);
   border-radius: 8px;
+  color: var(--white);
+  box-shadow: 0 18px 50px rgba(36, 25, 17, 0.16);
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.78)),
+    linear-gradient(35deg, rgba(22, 20, 18, 0.55), rgba(22, 20, 18, 0.05));
+}
+
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card span {
+  width: fit-content;
+  padding: 6px 10px;
+  background: rgba(255, 250, 245, 0.9);
+  border-radius: 999px;
   color: var(--ink);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.service-card h3 {
+  max-width: 310px;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.18;
+  font-weight: 900;
+}
+
+.service-color-consultation {
+  background-image: url("assets/Hair Color before 1.jpeg");
+}
+
+.service-color-transformation {
+  background-image: url("assets/Hair Color After 1.jpeg");
+}
+
+.service-color-correction {
+  background-image: url("assets/Hair Colore Before 2.jpeg");
+}
+
+.service-finishing {
+  background-image: url("assets/Hair Color After 2.jpeg");
+}
+
+.strengths-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.strengths-strip span {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -335,7 +406,7 @@ h3 {
     max-width: 380px;
   }
 
-  .skills-grid {
+  .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -364,11 +435,11 @@ h3 {
   }
 
   .role ul,
-  .skills-grid {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 
-  .skill {
-    min-height: 88px;
+  .service-card {
+    min-height: 300px;
   }
 }

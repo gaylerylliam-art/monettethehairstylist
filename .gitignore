@@ -1,5 +1,6 @@
 .env
 .netlify/
+.npm-cache/
 .repo/
 server-output.log
 server-error.log
