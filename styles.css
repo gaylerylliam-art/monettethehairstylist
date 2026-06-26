@@ -94,7 +94,7 @@ nav a:hover {
   background:
     linear-gradient(90deg, rgba(15, 12, 10, 0.9), rgba(15, 12, 10, 0.58) 42%, rgba(15, 12, 10, 0.18) 72%),
     linear-gradient(0deg, rgba(15, 12, 10, 0.68), rgba(15, 12, 10, 0.02) 42%),
-    url("assets/Monette hero Photo.png") center / cover no-repeat;
+    url("assets/Hero Page Section.png") center / cover no-repeat;
 }
 
 .hero-copy {
