@@ -279,7 +279,8 @@ h3 {
 }
 
 .hair-color-panel,
-.balayage-card {
+.balayage-card,
+.balayage-video-feature {
   display: grid;
   gap: 18px;
   padding: clamp(18px, 3vw, 28px);
@@ -377,9 +378,24 @@ h3 {
   aspect-ratio: 1 / 1;
 }
 
+.balayage-video-feature {
+  margin-top: 18px;
+  background: var(--ink);
+  border-color: rgba(216, 178, 126, 0.36);
+  color: var(--white);
+}
+
+.balayage-video-feature .eyebrow {
+  color: #d8b27e;
+}
+
+.balayage-video-feature .service-copy p:not(.eyebrow) {
+  color: rgba(255, 250, 245, 0.78);
+}
+
 .balayage-video-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -481,6 +497,10 @@ h3 {
   }
 
   .service-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .balayage-video-grid {
     grid-template-columns: 1fr;
   }
 }
