@@ -377,6 +377,33 @@ h3 {
   aspect-ratio: 1 / 1;
 }
 
+.balayage-video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.balayage-video-grid figure {
+  overflow: hidden;
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.balayage-video-grid video {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--ink);
+  object-fit: cover;
+}
+
+.balayage-video-grid figcaption {
+  padding: 10px 12px;
+  color: var(--ink);
+  font-weight: 900;
+}
+
 .strengths-strip {
   display: flex;
   flex-wrap: wrap;
