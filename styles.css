@@ -280,7 +280,8 @@ h3 {
 
 .hair-color-panel,
 .balayage-card,
-.balayage-video-feature {
+.balayage-video-feature,
+.foilyage-bob-section {
   display: grid;
   gap: 18px;
   padding: clamp(18px, 3vw, 28px);
@@ -420,6 +421,41 @@ h3 {
   font-weight: 900;
 }
 
+.foilyage-bob-section {
+  grid-template-columns: minmax(260px, 0.72fr) minmax(320px, 1.28fr);
+  align-items: end;
+  margin-top: 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(244, 236, 226, 0.86));
+}
+
+.foilyage-bob-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.foilyage-bob-gallery figure {
+  overflow: hidden;
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 16px 42px rgba(36, 25, 17, 0.12);
+}
+
+.foilyage-bob-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.foilyage-bob-gallery figcaption {
+  padding: 11px 12px;
+  color: var(--ink);
+  font-weight: 900;
+}
+
 .strengths-strip {
   display: flex;
   flex-wrap: wrap;
@@ -503,6 +539,10 @@ h3 {
   .balayage-video-grid {
     grid-template-columns: 1fr;
   }
+
+  .foilyage-bob-section {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 620px) {
@@ -530,7 +570,8 @@ h3 {
 
   .role ul,
   .hair-color-gallery,
-  .hair-video-grid {
+  .hair-video-grid,
+  .foilyage-bob-gallery {
     grid-template-columns: 1fr;
   }
 }
