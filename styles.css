@@ -281,7 +281,8 @@ h3 {
 .hair-color-panel,
 .balayage-card,
 .balayage-video-feature,
-.foilyage-bob-section {
+.foilyage-bob-section,
+.ash-mocha-section {
   display: grid;
   gap: 18px;
   padding: clamp(18px, 3vw, 28px);
@@ -456,6 +457,78 @@ h3 {
   font-weight: 900;
 }
 
+.ash-mocha-section {
+  margin-top: 18px;
+  background:
+    linear-gradient(135deg, rgba(22, 20, 18, 0.94), rgba(63, 48, 38, 0.9));
+  border-color: rgba(216, 178, 126, 0.34);
+  color: var(--white);
+}
+
+.ash-mocha-section .eyebrow {
+  color: #d8b27e;
+}
+
+.ash-mocha-section .service-copy p:not(.eyebrow) {
+  color: rgba(255, 250, 245, 0.78);
+}
+
+.ash-mocha-feature {
+  display: grid;
+  grid-template-columns: minmax(300px, 1.12fr) minmax(260px, 0.88fr);
+  gap: 12px;
+}
+
+.ash-mocha-result,
+.ash-mocha-before-grid figure,
+.ash-mocha-video-grid figure {
+  overflow: hidden;
+  margin: 0;
+  background: var(--white);
+  border: 1px solid rgba(228, 214, 199, 0.72);
+  border-radius: 8px;
+}
+
+.ash-mocha-result img,
+.ash-mocha-before-grid img,
+.ash-mocha-video-grid video {
+  width: 100%;
+  object-fit: cover;
+}
+
+.ash-mocha-result img {
+  aspect-ratio: 4 / 5;
+}
+
+.ash-mocha-before-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.ash-mocha-before-grid img {
+  aspect-ratio: 16 / 10;
+}
+
+.ash-mocha-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ash-mocha-video-grid video {
+  aspect-ratio: 4 / 5;
+  background: var(--ink);
+}
+
+.ash-mocha-result figcaption,
+.ash-mocha-before-grid figcaption,
+.ash-mocha-video-grid figcaption {
+  padding: 11px 12px;
+  color: var(--ink);
+  font-weight: 900;
+}
+
 .strengths-strip {
   display: flex;
   flex-wrap: wrap;
@@ -543,6 +616,10 @@ h3 {
   .foilyage-bob-section {
     grid-template-columns: 1fr;
   }
+
+  .ash-mocha-feature {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 620px) {
@@ -571,7 +648,8 @@ h3 {
   .role ul,
   .hair-color-gallery,
   .hair-video-grid,
-  .foilyage-bob-gallery {
+  .foilyage-bob-gallery,
+  .ash-mocha-video-grid {
     grid-template-columns: 1fr;
   }
 }
